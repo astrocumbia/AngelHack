@@ -4,7 +4,7 @@ package me.irvincastellanos.angelhack.item
  * Created by positr0nix on 7/9/17.
  */
 data class ProductItem(
-        val id: Long,
+        val id: Int,
         val name: String,
         val image: String,
         val gender: String,

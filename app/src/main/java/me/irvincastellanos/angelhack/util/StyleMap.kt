@@ -23,6 +23,11 @@ class StyleMap {
         var LEVIS = "Levis"
         var CK = "Calvin Klein"
 
+        var LP = "Liverpool"
+        val PLH = "Palacio de Hierro"
+        var SEARS = "Sears"
+        var ZARA = "Zara"
+
         fun getDrawable(type: String): Int {
             when {
                 type.equals(CLASIC) -> return R.drawable.clasic
@@ -39,6 +44,11 @@ class StyleMap {
                 type.equals(GUESS) -> return R.drawable.ic_guess
                 type.equals(LEVIS) -> return R.drawable.ic_levis
                 type.equals(CK) -> return R.drawable.ic_ck
+
+                type.equals(LP) -> return R.drawable.ic_liverpool
+                type.equals(PLH) -> return R.drawable.ic_palacio_hierro
+                type.equals(SEARS) -> return R.drawable.ic_sears
+                type.equals(ZARA) -> return R.drawable.ic_zara
             }
             return R.drawable.clasic
         }

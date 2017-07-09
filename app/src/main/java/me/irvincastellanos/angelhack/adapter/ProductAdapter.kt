@@ -1,6 +1,7 @@
 package me.irvincastellanos.angelhack.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.product_item_list.view.*
 import me.irvincastellanos.angelhack.R
+import me.irvincastellanos.angelhack.activity.DetailsActivity
 import me.irvincastellanos.angelhack.item.ProductItem
 import me.irvincastellanos.angelhack.util.StyleMap
 
@@ -27,6 +29,13 @@ class ProductAdapter(var ctx: Context, var list:List<ProductItem>) : RecyclerVie
                 .load(item.image)
                 .into(holder?.imgProduct);
 
+        holder?.cardview?.setOnClickListener {
+            var intent = Intent(ctx, DetailsActivity::class.java)
+            intent.putExtra("ID", item.id);
+
+            ctx.startActivity(intent)
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -45,5 +54,6 @@ class ProductAdapter(var ctx: Context, var list:List<ProductItem>) : RecyclerVie
         var imgProduct = itemView?.imgProduct
         var priceProduct = itemView?.priceProduct
         var txtTitleProduct = itemView?.txtTitleProduct
+        var cardview = itemView?.cardviewProductItem
     }
 }
