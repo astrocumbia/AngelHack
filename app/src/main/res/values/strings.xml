@@ -3,6 +3,10 @@
     <string name="facebook_app_id">879938762182266</string>
     <string name="fb_login_protocol_scheme">fb879938762182266</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Login Activity -->
+    <string name="title_gender">¿Qué tipo de ropa buscas?</string>
+    <string name="gender_male">Hombre</string>
+    <string name="gender_female">Mujer</string>
+    <string name="gender_other">Un género no me define</string>
+
 </resources>

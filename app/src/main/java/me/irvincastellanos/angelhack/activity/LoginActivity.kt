@@ -19,6 +19,11 @@ import com.google.firebase.auth.FacebookAuthProvider
 import com.facebook.AccessToken
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
+import me.irvincastellanos.angelhack.model.ModelUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+
+
 
 
 class LoginActivity : AppCompatActivity() {
@@ -68,9 +73,12 @@ class LoginActivity : AppCompatActivity() {
 
     fun checkValidUser(user: FirebaseUser?) {
         if (user != null) {
-            //startActivity(Intent(this, HomeActivity::class.java))
-            //finish()
-            Log.w("Login", "You have account")
+
+            val firebaseUser = ModelUser(user?.displayName.toString(), user?.email.toString(), user?.photoUrl.toString(), user?.uid.toString())
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference("USER")
+            myRef.child(firebaseUser.uid).setValue(firebaseUser)
+
             startActivity(Intent(this, IntroActivity::class.java))
         } else {
             Log.w("Login", "You don't have account")
