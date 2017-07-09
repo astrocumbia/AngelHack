@@ -1,33 +1,37 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context="me.irvincastellanos.angelhack.fragment.StyleFragment">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="16dp"
         android:gravity="bottom"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:orientation="vertical">
 
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rcStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="9"/>
+            android:layout_weight="9" />
 
-        <TextView
+        <Button
             android:id="@+id/txtNextStyle"
-            android:gravity="end"
-            android:text="Comenzar"
-            android:layout_below="@id/rcStyle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_below="@id/rcStyle"
+            android:layout_marginTop="22dp"
+            android:layout_weight="1"
+            android:background="#FF4351"
+            android:text="Listo"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
 
     </LinearLayout>
 
