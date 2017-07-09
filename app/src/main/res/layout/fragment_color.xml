@@ -4,39 +4,70 @@
     android:layout_height="match_parent"
     tools:context="me.irvincastellanos.angelhack.fragment.ColorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_margin="16dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿Què tipo de color te define?"
-            android:textSize="18dp"/>
+            android:gravity="center"
+            android:text="¿Qué tipo de color te define?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/color1Btn"
-            android:text="Neutros"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/color2Btn"
-            android:text="Pastel"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/color3Btn"
-            android:text="crudos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/color4Btn"
-            android:text="Todos me gustan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/color1Btn"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/neutros"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:id="@+id/color2Btn"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pastel"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:id="@+id/color3Btn"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/crudos"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:id="@+id/color4Btn"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/estampados"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <Button
+                android:layout_marginTop="22dp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:text="Todos me gustan"
+                android:background="#FF4351"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
 </FrameLayout>

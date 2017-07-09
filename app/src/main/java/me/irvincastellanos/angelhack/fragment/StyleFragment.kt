@@ -2,6 +2,7 @@ package me.irvincastellanos.angelhack.fragment
 
 import android.app.Fragment
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
@@ -11,6 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_style.*
 import me.irvincastellanos.angelhack.R
+import me.irvincastellanos.angelhack.activity.HomeActivity
+import me.irvincastellanos.angelhack.activity.IntroActivity
 import me.irvincastellanos.angelhack.adapter.StyleAdapter
 import me.irvincastellanos.angelhack.item.StyleItem
 import me.irvincastellanos.angelhack.util.StyleMap
@@ -32,6 +35,10 @@ class StyleFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         rcStyle.layoutManager = GridLayoutManager(activity, 3)
         rcStyle.adapter = StyleAdapter(getData())
+
+        txtNextStyle.setOnClickListener {
+            nextFragment()
+        }
     }
 
     override fun onAttach(context: Context?) {
@@ -54,5 +61,10 @@ class StyleFragment : Fragment() {
                 StyleItem(StyleMap.VINTAGE,false),
                 StyleItem(StyleMap.OFFICE,false)
             )
+    }
+
+    private fun nextFragment() {
+        startActivity(Intent(activity, HomeActivity::class.java))
+        activity.finish()
     }
 }

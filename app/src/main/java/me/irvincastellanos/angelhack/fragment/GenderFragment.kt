@@ -30,17 +30,18 @@ class GenderFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        maleBtnGenderFragment.setOnClickListener {
+
+        imgMaleGender.setOnClickListener {
             Log.d(TAG, "male")
             nextFragment()
         }
 
-        femaleBtnGenderFragment.setOnClickListener {
+        imgFemaleGender.setOnClickListener {
             Log.d(TAG, "female")
             nextFragment()
         }
 
-        otherBtnGenderFragment.setOnClickListener {
+        imgOtherGender.setOnClickListener {
             Log.d(TAG, "other")
             nextFragment()
         }

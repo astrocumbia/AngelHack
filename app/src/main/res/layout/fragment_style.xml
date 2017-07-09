@@ -4,10 +4,31 @@
     android:layout_height="match_parent"
     tools:context="me.irvincastellanos.angelhack.fragment.StyleFragment">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcStyle"
-        android:layout_margin="10dp"
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcStyle"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"/>
+
+        <TextView
+            android:id="@+id/txtNextStyle"
+            android:gravity="end"
+            android:text="Comenzar"
+            android:layout_below="@id/rcStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
 </FrameLayout>
