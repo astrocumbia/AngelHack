@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.product_item_list.view.*
 import me.irvincastellanos.angelhack.R
 import me.irvincastellanos.angelhack.item.ProductItem
+import me.irvincastellanos.angelhack.util.StyleMap
 
 /**
  * Created by positr0nix on 7/9/17.
@@ -17,8 +19,13 @@ class ProductAdapter(var ctx: Context, var list:List<ProductItem>) : RecyclerVie
         var item = list[position]
 
         holder?.txtBrand?.text = item.brand
-        holder?.priceProduct?.text = item.getMaxPrice().toString()
+        holder?.imgIcBrand?.setImageResource(StyleMap.getDrawable(item.brand))
+        holder?.priceProduct?.text = "$ "+String.format("%.2f",item.getMaxPrice())
         holder?.txtTitleProduct?.text = item.name
+
+        Glide.with(ctx)
+                .load(item.image)
+                .into(holder?.imgProduct);
 
     }
 

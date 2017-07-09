@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_home_black_24dp"
+        title="Home" />
+    <tab
+        id="@+id/tab_notifications"
+        icon="@drawable/ic_favorite_black_24dp"
+        title="Notificaciones" />
+    <tab
+        id="@+id/tab_search"
+        icon="@drawable/ic_search_black_24dp"
+        title="Busqueda" />
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_person_black_24dp"
+        title="Perfil" />
+</tabs>

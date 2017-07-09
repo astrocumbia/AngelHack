@@ -6,14 +6,30 @@
     android:layout_height="match_parent"
     tools:context="me.irvincastellanos.angelhack.activity.HomeActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcProductsList"
-        android:layout_marginRight="0dp"
-        android:layout_marginLeft="0dp"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        <include layout="@layout/toolbar"/>
+
+        <com.roughike.bottombar.BottomBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            app:bb_tabXmlResource="@xml/bottom_menu" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_above="@id/bottomBar"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -18,6 +18,11 @@ class StyleMap {
         val VINTAGE = "vintage"
         val OFFICE = "office"
 
+        val NIKE = "Nike"
+        val GUESS = "Guess"
+        var LEVIS = "Levis"
+        var CK = "Calvin Klein"
+
         fun getDrawable(type: String): Int {
             when {
                 type.equals(CLASIC) -> return R.drawable.clasic
@@ -29,6 +34,11 @@ class StyleMap {
                 type.equals(SPORT) -> return R.drawable.sport
                 type.equals(VINTAGE) -> return R.drawable.vintage
                 type.equals(OFFICE) -> return R.drawable.office
+
+                type.equals(NIKE) -> return R.drawable.ic_nike
+                type.equals(GUESS) -> return R.drawable.ic_guess
+                type.equals(LEVIS) -> return R.drawable.ic_levis
+                type.equals(CK) -> return R.drawable.ic_ck
             }
             return R.drawable.clasic
         }

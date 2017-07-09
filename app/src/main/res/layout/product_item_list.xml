@@ -39,7 +39,7 @@
             android:id="@+id/imgProduct"
             android:src="@drawable/clasic"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="280dp" />
 
         <RelativeLayout
             android:background="#F7F7F7"
