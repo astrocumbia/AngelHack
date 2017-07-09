@@ -4,31 +4,36 @@
     android:layout_height="match_parent"
     tools:context="me.irvincastellanos.angelhack.fragment.GenderFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:paddingBottom="20dp"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿Què tipo de ropa buscas?"
-            android:textSize="18dp"/>
+            android:text="@string/title_gender"
+            android:textSize="22dp"/>
 
         <Button
+            android:id="@+id/maleBtnGenderFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hombre"/>
+            android:text="@string/gender_male"/>
 
         <Button
+            android:id="@+id/femaleBtnGenderFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mujer"/>
+            android:text="@string/gender_female"/>
+
         <Button
+            android:id="@+id/otherBtnGenderFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Un gènero no me define"/>
+            android:text="@string/gender_other"/>
     </LinearLayout>
 </FrameLayout>

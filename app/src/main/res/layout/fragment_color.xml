@@ -17,20 +17,26 @@
             android:textSize="18dp"/>
 
         <Button
+            android:id="@+id/color1Btn"
+            android:text="Neutros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/color2Btn"
+            android:text="Pastel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
+            android:id="@+id/color3Btn"
+            android:text="crudos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/color4Btn"
+            android:text="Todos me gustan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </FrameLayout>
