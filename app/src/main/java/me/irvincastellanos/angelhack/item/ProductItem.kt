@@ -12,10 +12,10 @@ data class ProductItem(
         val ranking: Double,
         val stores: List<StoreItem>) {
 
-    fun getMaxPrice(): Double {
-        var maxPrice: Double = 0.0
+    fun getMinPrice(): Double {
+        var maxPrice: Double = 100000.0
         for (store in stores) {
-            maxPrice = maxOf(maxPrice, store.price)
+            maxPrice = minOf(maxPrice, store.price)
         }
         return maxPrice
     }

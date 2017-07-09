@@ -28,7 +28,7 @@ class DetailsActivity : AppCompatActivity() {
 
         imgIcBrand?.setImageResource(StyleMap.getDrawable(item.brand))
         txtBrand?.text = item.brand
-        priceProduct?.text = "$ "+String.format("%.2f",item.getMaxPrice())
+        priceProduct?.text = "$ "+String.format("%.2f",item.getMinPrice())
         txtTitleProduct?.text = item.name
 
 

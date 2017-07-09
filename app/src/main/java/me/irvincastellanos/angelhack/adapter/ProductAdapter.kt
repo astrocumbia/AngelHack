@@ -22,7 +22,7 @@ class ProductAdapter(var ctx: Context, var list:List<ProductItem>) : RecyclerVie
 
         holder?.txtBrand?.text = item.brand
         holder?.imgIcBrand?.setImageResource(StyleMap.getDrawable(item.brand))
-        holder?.priceProduct?.text = "$ "+String.format("%.2f",item.getMaxPrice())
+        holder?.priceProduct?.text = "$ "+String.format("%.2f",item.getMinPrice())
         holder?.txtTitleProduct?.text = item.name
 
         Glide.with(ctx)
