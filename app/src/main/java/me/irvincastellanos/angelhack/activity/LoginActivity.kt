@@ -62,6 +62,8 @@ class LoginActivity : AppCompatActivity() {
             }
         })
 
+        Log.d("LoginActivity", "===>")
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
@@ -80,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
             myRef.child(firebaseUser.uid).setValue(firebaseUser)
 
             startActivity(Intent(this, IntroActivity::class.java))
+
         } else {
             Log.w("Login", "You don't have account")
         }
